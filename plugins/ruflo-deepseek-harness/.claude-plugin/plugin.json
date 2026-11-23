@@ -1,0 +1,23 @@
+{
+  "name": "ruflo-deepseek-harness",
+  "description": "DeepSeek harness integration for ruflo — one-shot chat (deepseek-chat) and reasoning-mode completions (deepseek-reasoner, with chain-of-thought surfaced separately) via the OpenAI-compatible DeepSeek API. Reads DEEPSEEK_API_KEY; optional, removable augmentation per ADR-150 that degrades gracefully when the key is unset or the API is unreachable.",
+  "version": "0.1.0",
+  "author": {
+    "name": "ruvnet",
+    "url": "https://github.com/ruvnet"
+  },
+  "homepage": "https://github.com/ruvnet/ruflo",
+  "license": "MIT",
+  "keywords": [
+    "ruflo",
+    "deepseek",
+    "deepseek-chat",
+    "deepseek-reasoner",
+    "reasoning",
+    "llm",
+    "harness",
+    "adr-150",
+    "optional-dependency",
+    "graceful-degradation"
+  ]
+}

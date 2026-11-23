@@ -200,6 +200,11 @@
       "name": "ruflo-music",
       "source": "./plugins/ruflo-music",
       "description": "AI music generation via Cognitum Music (cogmusic MCP) — compose lyrics/prompts, generate tracks, separate stems, extract MIDI, and master through your own music.cognitum.one account"
+    },
+    {
+      "name": "ruflo-deepseek-harness",
+      "source": "./plugins/ruflo-deepseek-harness",
+      "description": "DeepSeek chat and reasoning-mode completions (deepseek-chat, deepseek-reasoner) via the OpenAI-compatible DeepSeek API — reads DEEPSEEK_API_KEY and degrades gracefully when it is unset (ADR-150 optional augmentation)"
     }
   ]
 }

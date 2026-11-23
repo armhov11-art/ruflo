@@ -1,6 +1,6 @@
 # Ruflo Plugins
 
-32 Claude Code plugins for agent-powered development workflows. Load with `--plugin-dir`.
+40 Claude Code plugins for agent-powered development workflows. Load with `--plugin-dir`.
 
 ## Quick Start
 
@@ -23,6 +23,7 @@ claude $(ls -d plugins/ruflo-*/ | sed 's|^|--plugin-dir |' | tr '\n' ' ')
 | [ruflo-autopilot](ruflo-autopilot/) | Autonomous /loop task completion with prediction |
 | [ruflo-loop-workers](ruflo-loop-workers/) | 12 background workers via /loop or CronCreate |
 | [ruflo-workflows](ruflo-workflows/) | Workflow templates, parallel execution, branching |
+| [ruflo-arena](ruflo-arena/) | Competitive arenas and tournaments where program strategies compete and co-evolve (ADR-147/148) |
 
 ### Memory & Intelligence
 
@@ -35,6 +36,7 @@ claude $(ls -d plugins/ruflo-*/ | sed 's|^|--plugin-dir |' | tr '\n' ' ')
 | [ruflo-knowledge-graph](ruflo-knowledge-graph/) | Entity extraction, relation mapping, pathfinder traversal |
 | [ruflo-intelligence](ruflo-intelligence/) | SONA neural patterns, trajectory learning, model routing |
 | [ruflo-daa](ruflo-daa/) | Dynamic Agentic Architecture, cognitive patterns |
+| [ruflo-graph-intelligence](ruflo-graph-intelligence/) | Personalized PageRank, streaming graph updates, signed reasoning artifacts (sublinear-time-solver) |
 
 ### Architecture & Methodology
 
@@ -66,15 +68,26 @@ claude $(ls -d plugins/ruflo-*/ | sed 's|^|--plugin-dir |' | tr '\n' ' ')
 | [ruflo-observability](ruflo-observability/) | Structured logging, tracing, metrics correlation |
 | [ruflo-cost-tracker](ruflo-cost-tracker/) | Token usage tracking, budget alerts, cost optimization |
 
+### Harnesses & Model Integrations
+
+| Plugin | Description |
+|--------|-------------|
+| [ruflo-metaharness](ruflo-metaharness/) | MetaHarness score, genome, mint, mcp-scan and threat-model skills; optional router pairing (ADR-148/149/150) |
+| [ruflo-deepseek-harness](ruflo-deepseek-harness/) | DeepSeek chat and reasoning completions via `DEEPSEEK_API_KEY`, degrades gracefully without it |
+| [ruflo-agntcy](ruflo-agntcy/) | AGNTCY/Outshift integration — SLIM transport, CASA tool authorization, identity and observability spans (ADR-380) |
+
 ### Domain-Specific
 
 | Plugin | Description |
 |--------|-------------|
 | [ruflo-goals](ruflo-goals/) | GOAP planning, deep research, horizon tracking |
 | [ruflo-federation](ruflo-federation/) | Zero-trust cross-installation agent federation |
+| [ruflo-bbs-federation](ruflo-bbs-federation/) | AgentBBS business-domain rooms as a federation peer — register, publish, watch, human join (ADR-164) |
+| [ruflo-business-pods](ruflo-business-pods/) | Business pod templates (sales) and a dry-run single-tick runner for the federated business autopilot (ADR-164) |
 | [ruflo-iot-cognitum](ruflo-iot-cognitum/) | Cognitum Seed IoT — trust scoring, anomaly detection, fleet management |
 | [ruflo-neural-trader](ruflo-neural-trader/) | [`neural-trader`](https://npmjs.com/package/neural-trader) — 4 agents, LSTM/Transformer, Rust/NAPI backtesting, 112+ MCP tools |
 | [ruflo-market-data](ruflo-market-data/) | Market data ingestion, OHLCV vectorization, pattern matching |
+| [ruflo-music](ruflo-music/) | AI music via Cognitum Music — lyrics, tracks, stems, MIDI, mastering |
 
 ## Recommended Stacks
 
@@ -87,7 +100,7 @@ claude $(ls -d plugins/ruflo-*/ | sed 's|^|--plugin-dir |' | tr '\n' ' ')
 | Vector search | `ruflo-core` + `ruflo-ruvector` + `ruflo-rag-memory` + `ruflo-knowledge-graph` |
 | IoT development | `ruflo-core` + `ruflo-iot-cognitum` + `ruflo-agentdb` |
 | Trading systems | `ruflo-core` + `ruflo-neural-trader` + `ruflo-market-data` + `ruflo-ruvector` |
-| Full stack | All 32 plugins |
+| Full stack | All 40 plugins |
 
 ## npm Package Integration
 
@@ -137,7 +150,7 @@ claude plugin validate plugins/ruflo-<name>
 
 ## Verification & Discoverability
 
-Every MCP tool description across the 32 plugins must answer "use this over native (Bash/Read/Grep/Glob/Task/TodoWrite) when?" per [ADR-112](../v3/docs/adr/ADR-112-mcp-tool-discoverability.md). The rule is enforced by CI:
+Every MCP tool description across the 40 plugins must answer "use this over native (Bash/Read/Grep/Glob/Task/TodoWrite) when?" per [ADR-112](../v3/docs/adr/ADR-112-mcp-tool-discoverability.md). The rule is enforced by CI:
 
 ```bash
 # Run the audit (scans all MCPTool definitions across all plugins)
